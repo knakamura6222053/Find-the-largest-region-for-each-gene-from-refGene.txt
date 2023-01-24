@@ -1,0 +1,30 @@
+#!/usr/bin/env/python3
+
+
+# refGene.txtを読み込み、「file」として扱う
+with open("refGene.txt", "r") as file:
+# dict型を使用    
+　　gene_regions = {}
+
+# refGeneを1行ずつ読み込む
+    for line in file:
+# カラムに入れる際は、タブ区切りで該当の列以外は消去する
+# 該当の列は、gene_name,start,end
+        columns = line.strip().split("\t")
+        gene_name = columns[12]
+        start = int(columns[4])
+        end = int(columns[5])
+# 最大の領域範囲を調べるため、end - start
+        region = end - start
+
+# gene_nameの中で複数種類がある場合は最大のものをregionとする
+        if gene_name in gene_regions:
+            if region > gene_regions[gene_name]:
+                gene_regions[gene_name] = region
+# gene_nameの中に１種類しかない場合は、それをregionとする
+        else:
+            gene_regions[gene_name] = region
+# 表示する際は、"Gene"と"Region size"が表示されるようにする
+    for gene_name, region_size in gene_regions.items():
+        print("Gene: " + gene_name)
+        print("Region size: " + str(region_size))
