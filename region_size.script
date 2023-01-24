@@ -28,3 +28,10 @@ with open("refGene.txt", "r") as file:
     for gene_name, region_size in gene_regions.items():
         print("Gene: " + gene_name)
         print("Region size: " + str(region_size))
+#出力する
+        with open("regionsize.txt", "w") as output:
+#for 変数 in 関数.items() でkey(gene_name),value(region_size)を全てのデータ分繰り返す
+        for gene_name, region_size in gene_regions.items():
+# "\n"　は改行
+            output.write("Gene: " + gene_name + "\n")
+            output.write("Region size: " + str(region_size) + "\n")
