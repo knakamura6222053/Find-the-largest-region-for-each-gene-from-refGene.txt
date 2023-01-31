@@ -5,6 +5,6 @@ Find the largest region for each gene
 refGene.txt URL: https://hgdownload.soe.ucsc.edu/goldenPath/hg38/database/refGene.txt.gz
 
 ### Protocol
-Please refer to the followin URL
+Please refer to the follow in URL
 
 https://github.com/knakamura6222053/Counting-characters-from-a-file/blob/main/README.md
