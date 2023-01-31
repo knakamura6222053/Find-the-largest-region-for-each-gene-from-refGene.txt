@@ -6,4 +6,5 @@ refGene.txt URL: https://hgdownload.soe.ucsc.edu/goldenPath/hg38/database/refGen
 
 ### Protocol
 Please refer to the followin URL
+
 https://github.com/knakamura6222053/Counting-characters-from-a-file/blob/main/README.md
